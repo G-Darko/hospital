@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/logo_hospital.ico">
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<title>Hospital MG | Formulario de Satisfacción</title>
+</head>
+<body>
+		<section class="encabezado">
+			<div> <img class="logo" src="img/hospital.gif" alt=""> </div>
+		</section>
+	<header>
+		<div class="header">
+			<h1>Hospital MG</h1>
+			<div class="optionsBar">
+			 <p ><script type="text/javascript">
+					var d = new Date();
+					var mes = d.getMonth()+1;
+					var dia=new Array(7);
+					dia[0]="Domingo";
+					dia[1]="Lunes";
+					dia[2]="Martes";
+					dia[3]="Miercoles";
+					dia[4]="Jueves";
+					dia[5]="Viernes";
+					dia[6]="Sabado";
+					var mm=new Date();
+					var m2 = mm.getMonth() + 1;
+					var mesok = (m2 < 10) ? '0' + m2 : m2;
+					var mesok=new Array(12);
+					mesok[0]="Enero";
+					mesok[1]="Febrero";
+					mesok[2]="Marzo";
+					mesok[3]="Abril";
+					mesok[4]="Mayo";
+					mesok[5]="Junio";
+					mesok[6]="Julio";
+					mesok[7]="Agosto";
+					mesok[8]="Septiembre";
+					mesok[9]="Octubre";
+					mesok[10]="Noviembre";
+					mesok[11]="Diciembre";
+					document.write(dia[d.getDay()]+", "+d.getDate(),' de '+mesok[mm.getMonth()],' de '+d.getFullYear());
+					</script></p>
+					<script type="text/javascript">
+						function startTime(){
+						today=new Date();
+						h=today.getHours();
+						m=today.getMinutes();
+						s=today.getSeconds();
+						m=checkTime(m);
+						s=checkTime(s);
+						document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+						t=setTimeout('startTime()',500);}
+						function checkTime(i)
+						{if (i<10) {i="0" + i;}return i;}
+						window.onload=function(){startTime();}
+						</script></p>
+					<div id="reloj" style="font-size:20px; font-family: monospace; color: #000;"></div>   
+			</div>
+		</div>
+		<nav>
+			<ul>	
+				<li class="principal">
+				<a href="Bienvenida.html">Bienvenida</a>
+				</li> 
+
+				<li class="principal">
+					<a href="http://localhost/Hospital/Especialidades.php">Especialidades</a>
+				</li>
+
+				<li class="principal">
+					<a href="http://localhost/Hospital/Doctores.php">Doctores</a>
+				</li>
+
+				<li class="principal">
+					<a href="http://localhost/Hospital/Pacientes.php">Pacientes ⬇</a>
+					<ul>
+						<li><a href="http://localhost/Hospital/Registros.php">Registros</a></li>
+						<li><a href="Formulario de Satisfacción.html">Formulario de satisfacción</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+		<div class="caja">
+		<section id="contenedor">
+			<h1>Formulario de Satisfacción</h1>
+			<form action="" method="post">
+				<table class="ta">
+					<tr>
+						<th class="ta"> ¿Cómo fue la atencion? (Buena, Reglar, Mala)</th>
+						<th class="ta"><input type="range" name="nivel" min="1" max="3" list="lista_nivel" value="1">
+						<datalist id="lista_nivel">
+							<option value="1" label="Buena">
+							<option value="2" label="Regular">
+							<option value="3" label="Mala">
+						</datalist>	
+						</th>
+					</tr>
+			</table>
+
+			<table class="ta">
+		 	<th class="ta"><label for="c">¿Qué Doctor l@ atendio?:</label></th>
+		 	<th class="ta">
+			<select name="Doctores"> 
+				<option value="0"></option>
+				<option value="1">Ariadna Jiménez Huidobro</option>
+				<option value="2">Vladimir Roman Elizondo</option>
+				<option value="3">Elena Jimenez Divaichin</option>
+				<option value="4">Abel Cogollor Aranda</option>
+				<option value="5">Odaliz Cabanela Galindez</option>
+				<option value="6">Ismael Yanes Canton</option>
+				<option value="7">Néstor Rios Tejeria</option>
+				<option value="8">Esteban Fariña Solorzano</option>
+				<option value="9">Matías Lucero Escajadillo</option>
+				<option value="10">Viviana Marquez Ameyugo</option>
+			</select> 
+			</th>
+			</table>
+			<h4>Califique del 1 al 10</h4>
+			<table class="calif">
+				<tr>
+					<th>Razgo a calificar</th>
+					<th>Calificación</th>
+				</tr>
+				<TR>
+					<TD>Limpieza</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Atención</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Ordén</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Habilidades de los Dcotores</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Comunicación</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Acceso a Medicamento</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+				<TR>
+					<TD>Profecionalismo del Personal</TD>
+					<td><input type="number" min="1" max="10" value="10"></td>
+				</TR>
+			</table>
+			<table class="ta">
+				<tbody>
+					<tr>
+						<th class="ta">¿Nos recomendaria?</th>
+						<th class="ta"><label for="si">Si &nbsp; </label></th>
+				    	<th class="ta"><input type="radio" name="si" value="si" id="si_no" checked=""></th>
+				    	<th class="ta"><label for="no">&nbsp; No &nbsp;</label></th>
+				    	<th class="ta"><input type="radio" name="si" value="no" id="si_no"></th>
+					</tr>
+				</tbody>
+			</table>
+			<p class="btn_enviar" onclick="enviar()">Enviar Formulario</p>
+			<input type="reset" value="BORRAR TODO">
+		</form>
+		</section>
+		</div>	
+	<footer>
+		<p>&copy; 2021 <strong>DARKO</strong>, Desarrolla Aplicaciones WEB </p>
+	</footer>
+		<script>
+			swal({
+  				title: "Formulario de Satisfacción",
+  				text: "Ingresa tú Nombre y Edad (ejemplo: Lesly Palacios Gallega, 28 años)",
+				content: "input",
+  				icon: "info",
+  				button: "Enviar Datos",
+				});
+			function enviar(){
+				swal({
+  				title: "Formulario Enviado",
+  				text: "Gracias por su tiempo, sugerencias y/u opinión",
+  				icon: "success",
+  				button: "Cerrar",
+				});
+			}		
+		</script>
+</body>
+</html>
